@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Git
+.git/
+.gitignore
+
+# Caches
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Model caches
+
+uploads/model_cache/
+
+
+# Large files
+*.pt
+*.bin
+*.safetensors
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Mac
+.DS_Store
