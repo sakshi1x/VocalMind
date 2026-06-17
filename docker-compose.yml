@@ -7,14 +7,14 @@ services:
     env_file: .env
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-sentiment_db}
-      POSTGRES_USER: ${POSTGRES_USER:-sakshi-rumsan}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-rumsan}
+      POSTGRES_USER: ${POSTGRES_USER:-sakshi}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:1234}
     ports:
       - "${POSTGRES_PORT_HOST:-5433}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-sakshi-rumsan}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-sakshi}"]
       interval: 10s
       timeout: 5s
       retries: 5
