@@ -81,7 +81,7 @@ services:
 
     volumes:
       - ./:/app:delegated
-      - /Users/rumsan/Documents/apps/grievance-ai-system/services/asr-service/model_cache:/app/services/asr-service/model_cache
+      - asr-service/model_cache:/app/services/asr-service/model_cache
       - nlp_model_cache:/app/uploads/model_cache
 
     command: ["bash", "/app/scripts/run_migrations.sh"]
